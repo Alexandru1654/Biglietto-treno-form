@@ -1,16 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biglietto treno form</title>
+    <title>Calcola il Prezzo del Biglietto</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+        <!--User data form-->
+        <form id="ticket-form">
+            <div class="form-group">
+                <label for="name">Nome Cognome:</label>
+                <input type="text" id="name" placeholder="Nome Cognome" required>
+            </div>
 
+            <div class="form-group">
+                <label for="km">Km da percorrere:</label>
+                <input type="number" id="km" placeholder="Km da percorrere" required>
+            </div>
 
+            <div class="form-group">
+                <label for="age-group">Fascia d'età:</label>
+                <select id="age-group">
+                    <option value="maggiorenne">Maggiorenne</option>
+                    <option value="minorenne">Minorenne</option>
+                    <option value="over65">Over 65</option>
+                </select>
+            </div>
 
+            <div class="button-group">
+                <button type="button" id="generate">Genera</button>
+                <button type="reset">Annulla</button>
+            </div>
+        </form>
+
+        <!--Ticket details-->
+        <div id="ticket-details" class="hidden">
+            <h2>IL TUO BIGLIETTO</h2>
+            <table>
+                <tr>
+                    <th>NOME PASSEGGERO</th>
+                    <th>Offerta</th>
+                    <th>Carrozza</th>
+                    <th>Codice CP</th>
+                    <th>Costo Biglietto</th>
+                </tr>
+                <tr>
+                    <td id="passenger-name"></td>
+                    <td id="offer"></td>
+                    <td id="carriage"></td>
+                    <td id="code"></td>
+                    <td id="ticket-cost"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
+
